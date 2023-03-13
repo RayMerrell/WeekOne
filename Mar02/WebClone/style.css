@@ -1,0 +1,427 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  @font-face {
+    font-family: chevin-medium;
+    src: url(./fonts/Chevin\ Medium.otf);
+  }
+
+body, p{
+    font-family: chevin-medium,Helvetica,Arial,"Nimbus Sans L",sans-serif;
+    line-height:1;
+    font-size:1rem;
+    font-weight:400;
+    color:#6C6C6C;
+}
+ul{
+    float:left;
+    list-style: none;
+}
+
+.clsLayoutContainer{
+    width: 100%;
+    height: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.clsHeader{
+    /* background-color:#DC3232; */
+}
+.clsMainMenu{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.clsTopMenuContainer{
+    width:100%;
+    display:flex;
+    background-color:#c70f15;
+    max-height:45px;
+    padding-right:15px;
+    padding-left:15px;
+    font-size:18px;
+    line-height:18px;    
+    font-weight:400;
+    justify-content: center;
+}
+.clsTopMenu{
+    display:flex;
+    width:70%;
+}
+
+.clsBusinessTypeMenu{
+    justify-self: flex-start;
+}
+.clsTopMenu ul{
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    flex-shrink:1;
+} 
+.clsMenuLink{
+    color:#FFF;
+    font-size:1rem;
+    line-height: 1;
+    text-align:left;
+    text-decoration: none;
+    display:flex;
+    padding:15px 20px;
+    position:relative;
+}
+.clsMenuLinkBar{
+    min-width:3px;
+    padding:15px 0;
+}
+.clsMenuLink:hover{
+    text-decoration: underline;
+}
+.clsActiveMenuLink{
+    background-color:rgb(220,50,50);
+}
+.clsTopMenuSpacer{
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+.clsTopRightMenu{
+    display:flex;
+    justify-content: flex-end;
+}
+.clsServicesIcon{
+    height:1.25rem;
+    width:1.25rem;
+}
+
+.clsLogo{
+    display:flex;
+    height:88px;
+    padding-top:23px;
+    background-color:rgb(220,50,50);
+    justify-content: center;
+    width:100%;
+}
+.clsLogoImageContainer{
+    width:70%;
+    display:flex;
+    justify-content: flex-start;
+}
+.clsLogoImage{
+    width:101px;
+    height:65.3438px;
+    overflow: visible;
+}
+
+
+.clsBottomMenuContainer{
+    display:flex;
+    background-color:rgb(220,50,50);
+    height:40px;
+    line-height:1;
+    width:100%;
+    justify-content: center;
+    /* font-weight:400;
+    font-size:1em; */
+}
+.clsBottomMenu{
+    display:flex;
+    width:67.5%;
+    justify-content: flex-end;
+}
+.clsBottomMenuSpacer{
+    width:55%;
+}
+.clsBottomMenu ul{
+    list-style: none;   
+    display: flex;    
+    flex-direction: row;       
+    align-items: center;
+    flex-grow:1;
+    background-color: white;
+    justify-content: space-between;
+    width:100%;
+}
+
+.clsBottomMenuLink{
+    color:rgb(71,71,71);
+    text-decoration: none;
+}
+.clsBottomMenuText{
+    padding: 0 10px;
+}
+.clsBottomMenuSearch{
+    padding-right: 0;
+}
+.clsSearchIcon{
+    position:relative;
+    height:40px;
+    width:50px;
+    top: 1px;
+    padding:0 10px;
+    color:white;
+    background-color: rgb(71,71,71);
+}
+
+.clsMainContent{
+    box-sizing:border-box;
+    background-color:#808080;
+    font-size:18px;
+    font-weight:400;
+    line-height:18px;
+}
+.clsHeroesAndServices{
+    height:800px;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-image:url("./images/flying-scotsman-stamps-1440x960.jpg");
+    background-size:cover;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: ". . track"
+    "heroes . track"
+    ". . track";
+}
+.clsFSSidebarLeftWrapper{
+    float:left;
+    display:block;
+    grid-area: heroes;
+    align-self: center;
+    justify-self: right;
+}
+.clsFlyingScotsmanContainer{
+    box-sizing:border-box;
+    color:#808080;
+    display:block;
+    margin-left: 0px;
+    margin-right: 0px;
+    max-width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width:480px;
+}
+.clsFSRow{
+    box-sizing:border-box;
+    display:flex;
+    flex-wrap:wrap;
+    margin-left:-15px;
+    margin-right:-15px;
+}
+.clsFSTextWrapper{
+    background-color: white;
+    box-sizing:border-box;
+    color:#808080;
+    display:box;
+    margin:0px,0px,30px,0px;
+    padding:30px;
+    position:relative;
+    width:360px;
+}
+.clsFSTitle{
+    box-sizing:border-box;
+    font-weight:700;
+    font-family: "PF Din Std Bold", Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    font-size:36px;
+    line-height:36px;
+    display:block;
+    color:black;
+    margin:0;
+    padding:0;
+}
+.clsFSLink{
+    box-sizing:border-box;
+    display:block;
+    font-size:18px;
+    font-weight:400;
+    line-height:18px;
+}
+.clsFSTertiary{
+    color:rgb(218,32,42);
+    cursor:pointer;
+    display:inline-block;
+    font-size:20px;
+    font-weight:700;
+    line-height:20px;
+    margin:20px, 0px, 0px, 0px;
+    text-decoration-color: rgb(218,32,42);
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+.clsIconWrapper{
+    box-sizing:border-box;
+    color:rgb(218,32,42);
+    cursor:pointer;
+    font-size:20px;
+    font-weight:700;
+    line-height:20px;
+}
+.clsIconArrow{
+    box-sizing: border-box;
+    color:rgb(218,32,42);
+    font-size:20px;
+    height:12px;
+    line-height: 20px;
+    margin-left: 10px;
+    overflow-clip-margin: content-box;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    stroke-width: 4px;
+    width:12px;
+
+}
+.clsTrackItemContainer{
+    box-sizing:border-box;
+    color:rgb(108, 108, 108);
+    display:block;
+    float:left;
+    font-size:18px;
+    font-weight:400;
+    min-width:40%;
+    background-color: white;
+    grid-area: track;
+    align-self: top;
+    justify-self: right;
+}
+.clsTrackFormContainer{
+    box-sizing:border-box;
+    color:rgb(108, 108, 108);
+    padding-top:50px;
+    padding-bottom: 50px;
+    position:relative;
+    max-width:100%;
+    margin-bottom: 10px;
+    align-content: center;
+}
+.clsTrackAndTraceForm{
+    box-sizing:border-box;
+    color:rgb(20,20,20);
+    line-height:18px;
+    margin-bottom: 10px;
+    display:flex;
+    flex-direction:column;
+    padding:48px;
+}
+.clsFormItemHeader{
+    color:rgb(26,26,26);
+    display:block;
+    font-family:"PF DinText Std Bold", Arial, Helvetica, sans-serif;
+    font-size:26px;
+    font-weight:700;
+    line-height:26px;
+    text-align:center;
+    margin-bottom:10px;
+    padding-top:10px;
+}
+.clsTrackFormInput{
+    margin-bottom:10px;
+    width: 90%;
+    padding:10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height:55px;
+}
+.clsInputButton{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:20px;
+    font-weight:400;
+    margin-bottom:10px;
+    width: 90%;
+    padding:10px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height:55px;
+    border:none;
+    color:white;
+    background: linear-gradient(90deg,#DA202A 2%,#FF4242 95%);
+}
+.clsServiceCardsContainer{
+    border-top: dotted 2px grey;   
+    margin-right:5px;
+    margin-left:5px;
+
+}
+.clsServiceCard{
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+        "image title arrow"
+        "image text arrow";
+    width:100%;
+    padding:5px;
+    cursor:pointer;
+    border-bottom: solid 1px lightgrey;
+}
+.clsServiceCardIcon{
+    grid-area:image;
+    align-self: center;
+    justify-self: center;
+    width:30px;
+}
+.clsServiceCardTitle{
+    grid-area:title;
+    color:rgb(218,32,42);
+    font-size:14px;
+    font-weight:700;
+    max-width:90%;
+    text-align:left;
+}
+.clsServiceCardText{
+    grid-area: text;
+    color:rgb(26,26,26);
+    font-size:18px;
+    font-weight:700;
+    max-width:90%;
+    text-align:left;
+}
+.clsServiceCardBlank{
+    grid-area: blank;
+}
+.clsServiceCardArrow{
+    grid-area: arrow;
+    align-self: center;
+    justify-self:flex-end;
+    margin-top:5px;
+}
+.clsInfoCardContainer{
+    display:flex;
+    gap:10px;
+    text-align: center;
+    justify-content: center;
+    padding:40px;
+    font-family: Arial, Helvetica, sans-serif;    
+    background: url(./images/rml-textured-background.png) center;
+}
+
+.clsInfoCard{
+    background-color: white;
+    width:350px;
+}
+.clsInfoCardLink{
+    text-decoration: none;
+}
+.clsInfoCardImage{
+    margin-bottom:20px;
+}
+.clsInfoCardTitle{
+    font-size:26px;
+    font-weight:700;
+    color:rgb(26,26,26);
+    line-height:26px;
+    margin-bottom:20px;
+
+}
+.clsInfoCardText{
+    color:rgb(108, 108, 108);
+    font-size:18px;
+    font-weight:400;
+    line-height:1.35;
+    margin-bottom:20px;
+    height:135px;
+}
+.clsInforCardAction{
+    color:rgb(218,32,42);
+    font-size:20px;
+    font-weight:700;
+    padding-bottom:20px;
+
+}

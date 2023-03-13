@@ -1,0 +1,147 @@
+.square{
+    width:300px;
+    height:100px;
+    background-color: #008080;
+    animation-name: button;
+    animation-duration: 4s;
+
+
+ /*    
+    transition: width 10s;
+    transition: border-radius 5s;
+    transition-timing-function: ease;
+    transition-timing-function: ease-in; */
+
+}
+.square:hover{
+    /* border-radius: 50%; */
+    width:1000px;
+}
+
+@keyframes button{
+    0%{
+        box-shadow:6px 6px 0 darkgray;
+    }
+    50%{
+        background-color: aqua;
+        box-shadow:6px 6px 0 darkslategray;
+    }
+    100%{
+        background-color: rgb(255, 153, 127);
+        box-shadow:6px 6px 0 black;
+    }
+}
+
+a{
+    color:white;
+}
+a:active{
+    color:rgb(20, 1, 1);
+}
+
+.clsContainer {
+    height:500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #008080;
+    display:flex;
+    color:white;
+    width:90%;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    border:solid 1px rgb(82, 81, 81);
+}
+.clsBee{
+    position:absolute;
+    animation: fly 10s ease-in-out infinite,
+                dipdown 10s ease-in-out infinite; 
+}
+@keyframes fly{
+    0%{transform:translateX(800px)}
+    100%{transform: translateX(-900px)}
+}
+@keyframes dipdown{
+    0%{top:0px}
+    20%{top:250px}
+    40%{top:0px}
+    60%{top:100px}
+    80%{top:250px}
+    100%{top:0px}
+}
+.clsButtonContainer {
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 33%;
+}
+img{
+    border-radius: 5px;
+}
+.clsLogo{
+    display: flex;
+    align-items: center;
+    transition:5s;
+}
+.clsLogo:hover{
+    transform:rotatey(360deg);
+}
+.clsButtonContainer div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background-color:rgb(147, 245, 245);
+    box-shadow: 2px 2px darkblue;
+}
+
+.clsWeb{
+    display:flex;
+    flex-basis:25%;
+    transform:skew(10deg);
+    width:75%;
+    height:37.5%;
+    border-radius: 5%;
+    transition: background 0.1s, transform 3s;
+}
+.clsWeb:hover{
+    transform:rotate(360deg) ;
+    background-color: aqua;  
+}
+
+.clsFace{
+    display:flex;
+    border-radius: 50%;
+    width:75%;
+    height:35%;
+    transition: background 0.1s, transform 3s;
+}
+.clsFace:hover{
+    transform:rotateX(360deg);
+    background-color: aqua;  
+}
+
+.clsTwitts{
+    border-radius: 50%;
+    width:75%;
+    height:25%;
+    transition: background 0.1s, transform 3s;
+}
+.clsTwitts:hover{
+    transform:rotatey(360deg);
+    background-color: aqua;  
+}
+
+.clsInsta{
+    width:75%;
+    height:25%;
+    border-radius: 10%;
+    transition: background 0.1s, transform 3s;
+}
+.clsInsta:hover{
+    background-color: aqua;  
+    transform: rotateZ(360deg);
+}
